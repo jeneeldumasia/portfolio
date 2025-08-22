@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Jeneel Dumasia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JD</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link active">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Skills & Expertise</h1>
+            <p class="page-subtitle">Technologies and tools I work with</p>
+        </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="skills-overview">
+        <div class="container">
+            <div class="skills-intro">
+                <h2>Technical Proficiency</h2>
+                <p>
+                    I specialize in DevOps, cloud computing, and automation technologies. My skills span from programming 
+                    and scripting to cloud infrastructure and machine learning. Here's a comprehensive overview of my technical expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming & Scripting -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Programming & Scripting</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <p>Advanced proficiency in Python for automation, data analysis, and machine learning applications.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p>Full-stack development with Node.js, Express, and modern JavaScript frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p>Database design, query optimization, and data management with SQL databases.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p>Modern web development with responsive design and CSS animations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud & DevOps -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Cloud & DevOps</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p>Cloud infrastructure, EC2, S3, Lambda, and AWS services for scalable solutions.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Cloud Platform</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <p>GCP services, Compute Engine, Cloud Storage, and cloud-native development.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <p>Version control, collaborative development, and CI/CD pipeline integration.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p>System administration, shell scripting, and Linux-based development environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning & Computer Vision -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Machine Learning & Computer Vision</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>OpenCV</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p>Computer vision applications, image processing, and real-time video analysis.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>NumPy</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p>Numerical computing, array operations, and mathematical computations.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>SciPy</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <p>Scientific computing, optimization algorithms, and statistical analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Skills -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Additional Skills</h2>
+            <div class="additional-skills">
+                <div class="skill-tag">Docker</div>
+                <div class="skill-tag">Kubernetes</div>
+                <div class="skill-tag">Jenkins</div>
+                <div class="skill-tag">Terraform</div>
+                <div class="skill-tag">Ansible</div>
+                <div class="skill-tag">MongoDB</div>
+                <div class="skill-tag">Express.js</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">Android Development</div>
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">XML</div>
+                <div class="skill-tag">Raspberry Pi</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Summary -->
+    <section class="skills-summary">
+        <div class="container">
+            <div class="summary-content">
+                <h2>Continuous Learning</h2>
+                <p>
+                    Technology evolves rapidly, and I'm committed to staying current with the latest trends and tools. 
+                    I regularly participate in online courses, contribute to open-source projects, and experiment with 
+                    new technologies to expand my skill set.
+                </p>
+                <div class="learning-stats">
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Growth Mindset</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeneel Dumasia</h3>
+                    <p>DevOps & Cloud Engineer passionate about automation and scalable solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jeneeldumasia" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jeneel" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:jeneeldumasia18@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jeneel Dumasia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

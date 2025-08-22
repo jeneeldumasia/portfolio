@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jeneel Dumasia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JD</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Blog</h1>
+            <p class="page-subtitle">Thoughts on technology, DevOps, and cloud computing</p>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-image">
+                    <div class="featured-overlay">
+                        <div class="featured-content">
+                            <span class="featured-badge">Featured</span>
+                            <h2>The Future of DevOps: Automation and AI Integration</h2>
+                            <p>Exploring how artificial intelligence is revolutionizing DevOps practices and what it means for the future of software development and deployment.</p>
+                            <div class="article-meta">
+                                <span class="article-date">December 15, 2024</span>
+                                <span class="article-category">DevOps</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <a href="blog-future-devops.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles -->
+    <section class="blog-articles">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">Cloud Computing</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>AWS vs GCP: Choosing the Right Cloud Platform</h3>
+                        <p>A comprehensive comparison of AWS and Google Cloud Platform, helping you make informed decisions for your cloud infrastructure needs.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 10, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="blog-aws-gcp.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">Python</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Building Scalable Python Applications</h3>
+                        <p>Best practices and patterns for building scalable Python applications, from microservices to monolithic architectures.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 5, 2024</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <a href="blog-python-scalable.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Computer Vision with OpenCV: A Practical Guide</h3>
+                        <p>Practical implementation of computer vision projects using OpenCV, from basic image processing to advanced applications.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">November 30, 2024</span>
+                            <span class="blog-read-time">12 min read</span>
+                        </div>
+                        <a href="blog-opencv-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Setting Up CI/CD Pipelines with Jenkins</h3>
+                        <p>Step-by-step guide to setting up continuous integration and deployment pipelines using Jenkins and Docker.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">November 25, 2024</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="blog-jenkins-cicd.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">Linux</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Linux System Administration Essentials</h3>
+                        <p>Essential Linux system administration skills every DevOps engineer should know, from basic commands to advanced troubleshooting.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">November 20, 2024</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <a href="blog-linux-admin.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-overlay">
+                            <span class="blog-category">Career</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Breaking into DevOps: A Beginner's Guide</h3>
+                        <p>Essential tips and resources for transitioning into a DevOps career, including skills to learn and certifications to pursue.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">November 15, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="blog-devops-beginner.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="categories-grid">
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <span class="category-count">5 articles</span>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <span class="category-count">8 articles</span>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>DevOps</h3>
+                    <span class="category-count">6 articles</span>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <span class="category-count">4 articles</span>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-linux"></i>
+                    </div>
+                    <h3>Linux</h3>
+                    <span class="category-count">3 articles</span>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career</h3>
+                    <span class="category-count">2 articles</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to my newsletter for the latest insights on DevOps, cloud computing, and technology trends.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Stats -->
+    <section class="blog-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Articles Published</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Monthly Readers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Original Content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeneel Dumasia</h3>
+                    <p>DevOps & Cloud Engineer passionate about automation and scalable solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jeneeldumasia" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jeneel" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:jeneeldumasia18@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jeneel Dumasia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

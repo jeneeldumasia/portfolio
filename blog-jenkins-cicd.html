@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up CI/CD Pipelines with Jenkins - Jeneel Dumasia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JD</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="article-meta">
+                <span class="article-category">CI/CD</span>
+                <span class="article-date">November 25, 2024</span>
+                <span class="read-time">7 min read</span>
+            </div>
+            <h1 class="article-title">Setting Up CI/CD Pipelines with Jenkins</h1>
+            <p class="article-subtitle">Step-by-step guide to setting up continuous integration and deployment pipelines using Jenkins and Docker.</p>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+                <p>Continuous Integration and Continuous Deployment (CI/CD) have become essential practices in modern software development, enabling teams to deliver high-quality software faster and more reliably. Jenkins, as one of the most popular open-source automation servers, provides a robust platform for building, testing, and deploying applications. This guide will walk you through setting up comprehensive CI/CD pipelines using Jenkins and Docker.</p>
+
+                <h2>Understanding CI/CD Fundamentals</h2>
+                <p>Continuous Integration involves automatically building and testing code changes as they are committed to version control. This practice helps identify integration issues early and ensures that the codebase remains in a working state. Continuous Deployment extends this concept by automatically deploying code changes to production environments after successful testing.</p>
+
+                <p>The benefits of implementing CI/CD include faster feedback loops, reduced manual errors, improved code quality, and increased deployment frequency. Jenkins provides the flexibility to implement these practices across various programming languages, frameworks, and deployment targets. Understanding these fundamentals is crucial for designing effective pipelines.</p>
+
+                <h2>Installing and Configuring Jenkins</h2>
+                <p>Jenkins can be installed on various platforms including Linux, Windows, and macOS. The recommended approach is to use Docker for easy setup and management. Running Jenkins in a Docker container provides isolation, portability, and simplified backup and restore procedures. The official Jenkins Docker image includes all necessary dependencies and can be easily customized.</p>
+
+                <p>After installation, the initial setup involves unlocking Jenkins using the provided administrator password, installing recommended plugins, and creating an admin user. The plugin ecosystem is one of Jenkins' greatest strengths, providing integrations with version control systems, build tools, testing frameworks, and deployment platforms. Essential plugins include Git, Docker, Pipeline, and Blue Ocean for enhanced pipeline visualization.</p>
+
+                <h2>Creating Your First Pipeline</h2>
+                <p>Jenkins pipelines are defined using either declarative or scripted syntax. Declarative pipelines are the recommended approach as they provide a more structured and readable format. A basic pipeline consists of stages that define the different phases of the build process, such as checkout, build, test, and deploy.</p>
+
+                <p>The pipeline definition can be stored in a Jenkinsfile within your source code repository, enabling version control and code review of your CI/CD configuration. This approach, known as Pipeline as Code, ensures that your build process is documented, versioned, and can be easily replicated across different environments. The Jenkinsfile should be committed to your repository alongside your application code.</p>
+
+                <h2>Integrating with Version Control Systems</h2>
+                <p>Jenkins integrates seamlessly with popular version control systems like Git, GitHub, GitLab, and Bitbucket. Webhook integration allows Jenkins to automatically trigger builds when code is pushed to specific branches. This integration enables immediate feedback on code changes and ensures that all commits are automatically tested.</p>
+
+                <p>Branch-specific pipelines can be configured to handle different deployment strategies. For example, commits to the main branch might trigger deployment to production, while feature branches might only run tests. Multi-branch pipelines automatically create jobs for new branches and delete jobs for deleted branches, keeping your Jenkins configuration clean and up-to-date.</p>
+
+                <h2>Building and Testing Applications</h2>
+                <p>The build stage typically involves compiling source code, resolving dependencies, and creating artifacts. Jenkins supports various build tools including Maven, Gradle, npm, and custom shell scripts. The build process should be deterministic and reproducible, ensuring consistent results across different environments.</p>
+
+                <p>Testing is a critical component of CI/CD pipelines. Unit tests, integration tests, and end-to-end tests should be executed automatically as part of the pipeline. Jenkins provides various testing plugins and integrations with testing frameworks. Test results should be collected and reported, with failed tests preventing deployment to production environments.</p>
+
+                <h2>Containerization with Docker</h2>
+                <p>Docker integration is essential for modern CI/CD pipelines. Jenkins can build Docker images, run containers for testing, and push images to registries. The Docker plugin provides convenient steps for building images, running containers, and managing Docker resources within pipelines.</p>
+
+                <p>Multi-stage Docker builds can be used to optimize image size and build times. The build stage can compile the application, while the runtime stage contains only the necessary dependencies for running the application. This approach reduces image size and improves security by excluding build tools from production images.</p>
+
+                <h2>Deployment Strategies</h2>
+                <p>Jenkins supports various deployment strategies including blue-green deployments, rolling updates, and canary deployments. The choice of deployment strategy depends on your application requirements, infrastructure constraints, and risk tolerance. Blue-green deployments involve maintaining two identical production environments and switching traffic between them.</p>
+
+                <p>Rolling updates gradually replace old instances with new ones, minimizing downtime and risk. Canary deployments deploy new versions to a small subset of users first, allowing for testing in production before full deployment. Jenkins pipelines can implement these strategies using various deployment tools and platforms.</p>
+
+                <h2>Environment Management</h2>
+                <p>Managing multiple environments (development, staging, production) is crucial for reliable deployments. Jenkins provides environment-specific configurations and credentials management. Environment variables, configuration files, and secrets can be managed securely using Jenkins' built-in features or external secret management systems.</p>
+
+                <p>Pipeline promotion allows for manual approval steps before deploying to production environments. This provides an additional safety net while maintaining automation for lower environments. Approval workflows can be customized based on team structure and compliance requirements.</p>
+
+                <h2>Monitoring and Notifications</h2>
+                <p>Pipeline monitoring is essential for maintaining reliable CI/CD processes. Jenkins provides built-in monitoring capabilities including build history, success rates, and execution times. External monitoring tools can be integrated to provide additional insights and alerting.</p>
+
+                <p>Notifications keep teams informed about pipeline status and failures. Jenkins supports various notification channels including email, Slack, Microsoft Teams, and custom webhooks. Notifications should be configured to provide relevant information without causing notification fatigue. Failed builds should trigger immediate notifications, while successful builds might only be reported in daily summaries.</p>
+
+                <h2>Security Best Practices</h2>
+                <p>Security is a critical consideration in CI/CD pipelines. Jenkins should be configured with proper authentication and authorization. Role-based access control (RBAC) should be implemented to ensure that users only have access to the resources they need. Regular security updates should be applied to Jenkins and its plugins.</p>
+
+                <p>Secrets management is essential for protecting sensitive information like API keys, passwords, and certificates. Jenkins provides built-in credential management, but external secret management systems like HashiCorp Vault or AWS Secrets Manager can provide additional security features. Secrets should never be hardcoded in pipeline scripts or committed to version control.</p>
+
+                <h2>Performance Optimization</h2>
+                <p>As pipelines grow in complexity and frequency, performance optimization becomes important. Parallel execution can significantly reduce pipeline execution times by running independent stages concurrently. Jenkins agents can be distributed across multiple machines to handle increased load.</p>
+
+                <p>Caching strategies can improve build times by reusing dependencies and artifacts. Docker layer caching, Maven local repository caching, and npm cache can all contribute to faster builds. Regular cleanup of old builds and artifacts prevents disk space issues and maintains system performance.</p>
+
+                <h2>Troubleshooting Common Issues</h2>
+                <p>Pipeline failures can occur for various reasons including code issues, infrastructure problems, and configuration errors. Jenkins provides comprehensive logging and debugging tools to help identify and resolve issues. Build logs should be reviewed regularly to identify patterns and prevent recurring problems.</p>
+
+                <p>Common issues include network connectivity problems, resource constraints, and plugin compatibility issues. Regular maintenance including plugin updates, log rotation, and system monitoring helps prevent these issues. Having a rollback strategy is essential for quickly recovering from failed deployments.</p>
+
+                <h2>Conclusion</h2>
+                <p>Setting up CI/CD pipelines with Jenkins provides a solid foundation for modern software development practices. The combination of Jenkins' flexibility and Docker's portability enables teams to create robust, scalable automation solutions. By following the best practices outlined in this guide, you can build reliable pipelines that improve code quality and deployment frequency.</p>
+
+                <p>Remember that CI/CD is an iterative process that should evolve with your team and application needs. Start with simple pipelines and gradually add complexity as you gain experience and confidence. Regular review and optimization of your pipelines ensures they continue to provide value as your application grows and changes.</p>
+            </div>
+
+            <div class="article-footer">
+                <div class="article-tags">
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">DevOps</span>
+                    <span class="tag">Automation</span>
+                </div>
+                <div class="article-share">
+                    <h4>Share this article:</h4>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <div class="container">
+            <h2>Related Articles</h2>
+            <div class="articles-grid">
+                <article class="related-card">
+                    <h3>The Future of DevOps: Automation and AI Integration</h3>
+                    <p>Exploring how artificial intelligence is revolutionizing DevOps practices and what it means for the future of software development and deployment.</p>
+                    <a href="blog-future-devops.html" class="read-more">Read More</a>
+                </article>
+                <article class="related-card">
+                    <h3>Linux System Administration Essentials</h3>
+                    <p>Essential Linux system administration skills every DevOps engineer should know, from basic commands to advanced troubleshooting.</p>
+                    <a href="blog-linux-admin.html" class="read-more">Read More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeneel Dumasia</h3>
+                    <p>DevOps & Cloud Engineer passionate about automation and scalable solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jeneeldumasia" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jeneel" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:jeneeldumasia18@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jeneel Dumasia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
